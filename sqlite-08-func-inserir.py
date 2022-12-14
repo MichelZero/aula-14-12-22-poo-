@@ -8,12 +8,13 @@
 # importar o Sqlite3
 import sqlite3 as db
 
-def inserir(nome, numero, email):
+# a função inserir recebe 3 parâmetros nome, numero e email e retorna uma string com o comando SQL
+def inserir(nome, numero, email): 
  #        INSERT INTO pessoas (nome, numero, email) 
  #        VALUES('Dani', '8395555-4444', 'dani2@gmail.com')
   sql = f"INSERT INTO pessoas (nome, numero, email) VALUES('{nome}','{numero}','{email}')"
- # print(sql)
-  return sql
+ # print(sql)  # para testar  a string sql gerada pela função inserir 
+  return sql  # retorna a string sql gerada pela função inserir 
 
 # criar o banco ou conecta o banco
 db1 = db.connect("agenda.db")

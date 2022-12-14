@@ -8,11 +8,13 @@
 # importar o Sqlite3
 import sqlite3 as db
 
+
+# a função atualizarNome recebe 2 parâmetros nome e email e retorna uma string com o comando SQL
 def atualizarNome(nome, email):
  #       "UPDATE pessoas SET idade = 20 WHERE nome = 'Dani'"
   sql = f"UPDATE pessoas SET nome = '{nome}' WHERE email = '{email}'"
- # print(sql)
-  return sql
+ # print(sql) # para testar  a string sql gerada pela função inserir 
+  return sql # retorna a string sql gerada pela função inserir
 
 # criar o banco ou conecta o banco
 db1 = db.connect("agenda.db")

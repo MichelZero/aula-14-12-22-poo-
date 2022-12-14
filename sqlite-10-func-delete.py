@@ -8,11 +8,13 @@
 # importar o Sqlite3
 import sqlite3 as db
 
+
+# a função excluir recebe 1 parâmetro email e retorna uma string com o comando SQL
 def excluir(email):
 #       "DELETE from pessoas WHERE idade = 9"
   sql = f"DELETE from pessoas WHERE email = '{email}'"
-  #print(sql)
-  return sql
+  #print(sql) # para testar  a string sql gerada pela função inserir
+  return sql # retorna a string sql gerada pela função inserir
 
 # criar o banco ou conecta o banco
 db1 = db.connect("agenda.db")
